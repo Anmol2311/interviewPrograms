@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+</body>
+<script>
+
+    // swap
+    var x = 10;
+    var y = 20;
+
+    x = x + y;
+    y = x - y;
+    x = x - y;
+    document.write("x:10 & y:20 = " + `x:${x} & y:${y}`);
+
+    // fibonacci series
+    var a = 0;
+    var b = 1;
+    var c;
+    document.write("<br>", a, ", ", b, ", ");
+    for (var i = 3; i <= 10; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+        document.write(c, ", ");
+    }
+
+    // armstrong
+    function isArmstrong(num) {
+        let newNum = num.toString().split('').map(n => n ** 3).reduce((a, b) => a + b);
+        if (num == newNum) {
+            return "Armstrong";
+        }
+        return "Not Armstrong";
+    }
+    document.write("<br>", isArmstrong(154))
+
+    // factorial of 4! = 4*3*2*1;
+    var fact = 1;
+    for (var i = 1; i <= 4; i++) {
+        fact *= i;
+    }
+    document.write("<br>", fact);
+
+    // palindrome number
+    function isPalindrome(num) {
+        let newNum = num.toString().split('').reverse().join('');
+        if (num == newNum) {
+            return "Palindrome";
+        }
+        return "Not Palindrome";
+    }
+    document.write("<br>", isPalindrome(222));
+
+    // prime number is prime or not
+    function isPrime(num) {
+        var a = false;
+        for (var i = 2; i < num; i++) {
+            if (num % i === 0) {
+                a = true;
+            }
+        }
+        if(a == false) return "Prime";
+        else return "Not Prime";
+    }
+    document.write("<br>", isPrime(13));
+
+    // print prime no between 1 to 15
+    for (var i = 1; i <= 15; i++) {
+        let a = false;
+        for (var j = 2; j <= i; j++) {
+            if (i % j === 0 && j !== i) {
+                a = true;
+            }
+        }
+        if (a == false) {
+            document.write("<br>", i);
+        }
+    }
+</script>
+
+</html>

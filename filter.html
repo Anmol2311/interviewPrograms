@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // search data by value from array
+        const students = ['krunal', 'ankit', 'appdividend', 'nehal', 'dhaval'];
+
+        const filterValues = (name) => {
+            return students.filter(data => {
+                return data.toLowerCase().indexOf(name.toLowerCase()) > -1;
+            });
+        }
+        document.write('<br><br>',filterValues('it'));
+
+
+        // search data by value from array of object
+        var objs = [
+            { first_nom: 'Lazslo', last_nom: 'Jamf' },
+            { first_nom: 'Pig', last_nom: 'Bodine' },
+            { first_nom: 'Pirate', last_nom: 'Prentice' }
+        ];
+        function transform(value, args = '') {
+
+            if (!value) return null;
+            if (!args) return value;
+
+            args = args.toLowerCase();
+
+            return value.filter(function (item) {
+                return JSON.stringify(item).toLowerCase().includes(args);
+            });
+        }
+        document.write('<br><br>', JSON.stringify(transform(objs, 'od')));
+
+    </script>
+</body>
+
+</html>

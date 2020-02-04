@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern Program</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <h2>Pattern 1</h2>
+                <h1 id="demo1"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 2</h2>
+                <h1 id="demo2"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 3</h2>
+                <h1 id="demo3"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 4</h2>
+                <h1 id="demo4"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 5</h2>
+                <h1 id="demo5"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 6</h2>
+                <h1 id="demo6"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 7</h2>
+                <h1 id="demo7"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 8</h2>
+                <h1 id="demo8"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 9</h2>
+                <h1 id="demo9"></h1>
+            </div>
+            <div class="col-md-2">
+                <h2>Pattern 10</h2>
+                <h1 id="demo10"></h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // *
+        // * *
+        // * * *
+        // * * * *
+        var str1 = ""
+        for (let i = 1; i <= 4; i++) {
+            for (let j = 1; j <= i; j++) {
+                str1 += "* ";
+            }
+            str1 += "<br>";
+        }
+        document.getElementById('demo1').innerHTML = str1;
+
+        // * * * *
+        // * * *
+        // * * 
+        // * 
+        var str2 = ""
+        for (let i = 1; i <= 4; i++) {
+            for (let j = 4; j >= i; j--) {
+                str2 += "* ";
+            }
+            str2 += "<br>";
+        }
+        document.getElementById('demo2').innerHTML = str2;
+
+
+
+        // 1
+        // 1 2
+        // 1 2 3
+        // 1 2 3 4
+        var str4 = ""
+        for (let i = 1; i <= 4; i++) {
+            for (let j = 1; j <= i; j++) {
+                str4 += j + " ";
+            }
+            str4 += "<br>";
+        }
+        document.getElementById('demo3').innerHTML = str4;
+
+        // 1 2 3 4
+        // 1 2 3
+        // 1 2 
+        // 1 
+        var str5 = ""
+        for (let i = 4; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                str5 += j + " ";
+            }
+            str5 += "<br>";
+        }
+        document.getElementById('demo4').innerHTML = str5;
+
+        // 1
+        // 2 2
+        // 3 3 3
+        // 4 4 4 4
+        var str6 = ""
+        for (let i = 1; i <= 4; i++) {
+            for (let j = 1; j <= i; j++) {
+                str6 += i + " ";
+            }
+            str6 += "<br>";
+        }
+        document.getElementById('demo5').innerHTML = str6;
+
+        // 4 4 4 4
+        // 3 3 3
+        // 2 2
+        // 1 
+        var str7 = ""
+        for (let i = 4; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                str7 += i + " ";
+            }
+            str7 += "<br>";
+        }
+        document.getElementById('demo6').innerHTML = str7;
+
+        // *
+        // * *
+        // * * *
+        // * * * *
+        // * * *
+        // * *
+        // *
+        var str3 = ""
+        for (let i = 1; i <= 4; i++) {
+            for (let j = 1; j <= i; j++) {
+                str3 += "* ";
+            }
+            str3 += "<br>";
+        }
+        for (let i = 1; i <= 4; i++) {
+            for (let j = 3; j >= i; j--) {
+                str3 += "* ";
+            }
+            str3 += "<br>";
+        }
+        document.getElementById('demo7').innerHTML = str3;
+
+        // var n = 4;
+        // var z = 1;
+        // var str8 = "";
+        // for (var i = 1; i <= n; i++) {
+        //     for (var j = n - 1; j >= i; j--) {
+        //         //document.write('&nbsp;&nbsp;');
+        //         str8 += '&nbsp;&nbsp;';
+        //     }
+        //     for (var k = 1; k <= z; k++) {
+        //         //document.write('*');
+        //         str8 += "*";
+        //     }
+        //     z += 2;
+        //     //document.write('<br>');
+        //     str8 += "<br/>";
+        // }
+        // document.getElementById('demo8').innerHTML = str8;
+
+
+    </script>
+</body>
+
+</html>

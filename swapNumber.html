@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swaping Numbers</title>
+</head>
+
+<body>
+
+    <script>
+        // without using third variable
+        var a = 10;
+        var b = 5;
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        console.log(a, b);
+
+        // using third variable
+        x = 4;
+        y = 6;
+        temp = x;
+        x = y;
+        y = temp;
+        console.log(x, y);
+
+        // factorial i.e 4! = 4*3*2*1;
+        var fact = 1;
+        var n = 4;
+        for (var i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        console.log(fact);
+
+        // Armstrong number logic 1
+        function isArmstrong(n) {
+            const res = parseInt(n, 10) === n.toString()
+                .split('')
+                .reduce((sum, n) => parseInt(sum, 10) + n ** 3);
+            console.log(n, 'is', res, 'Armstrong number')
+            // return res
+        }
+        isArmstrong(154)
+
+        // Armstrong number logic 2
+        function Armstrong() {
+            var flag, number, remainder, addition = 0;
+            // number = Number(document.getElementById("N").value);
+            number = 153;
+            flag = number;
+            while (number > 0) {
+                remainder = number % 10;
+                addition = addition + remainder ** 3;
+                number = parseInt(number / 10);
+            }
+
+            if (addition == flag) {
+                window.alert("-The inputed number is Armstrong");
+            }
+            else {
+                window.alert("-The inputed number is not Armstrong");
+            }
+        }
+        Armstrong();
+
+
+        // Armstrong number logic 3
+        const armstrongNumber = (num) => {
+
+            const toArray = num.toString().split('').map(Number);
+
+            const newNum = toArray.map(a => { return a ** 3 }).reduce((a, b) => a + b);
+
+            if (newNum == num) {
+                console.log('This is an armstrong number');
+            } else {
+                console.log('This is not an armstrong number');
+
+            }
+        }
+        armstrongNumber(152);
+    </script>
+</body>
+
+</html>
